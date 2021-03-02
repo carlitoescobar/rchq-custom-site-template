@@ -28,6 +28,7 @@ setup_database() {
   echo -e " * Granting the wp user priviledges to the '${DB_NAME}' database"
   mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON \`${DB_NAME}\`.* TO wp@localhost IDENTIFIED BY 'wp';"
   echo -e " * DB initial setup done."
+  echo -e pwd
   mysql -u root --password=root ${DB_NAME} < /srv/database/template-test.sql
 }
 

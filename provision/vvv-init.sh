@@ -28,7 +28,7 @@ setup_database() {
   echo -e " * Granting the wp user priviledges to the '${DB_NAME}' database"
   mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON \`${DB_NAME}\`.* TO wp@localhost IDENTIFIED BY 'wp';"
   echo -e " * DB initial setup done."
-  mysql -u root --password=root ${DB_NAME} < /Users/carlito/Work/RCHQ/SITE\ SETUP/template-test.sql
+  mysql -u root --password=root ${DB_NAME} < template-test.sql
 }
 
 setup_nginx_folders() {
